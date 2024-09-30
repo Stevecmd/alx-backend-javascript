@@ -1,4 +1,4 @@
-export default function getSumOfHoods(initialValue,
-  expansionValue = 89, multiplierValue = 19) {
-  return initialValue + expansionValue + multiplierValue;
+export default function getSumOfHoods(initialNumber,
+    expansion1989 = 89, expansion2019 = 19) {
+  return initialNumber + expansion1989 + expansion2019;
 }
