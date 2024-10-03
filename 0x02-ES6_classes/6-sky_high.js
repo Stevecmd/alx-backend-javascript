@@ -11,8 +11,16 @@ export default class SkyHighBuilding extends Building {
    * @param {number} floors - The number of floors in the building.
    */
   constructor(sqft, floors) {
-    super().sqft = sqft;
+    super(sqft); // Correctly pass sqft to the parent class constructor
     this.floors = floors; // Use setter to validate floors
+  }
+
+  /**
+   * Returns an evacuation warning message.
+   * @return {string} The evacuation warning message.
+   */
+  evacuationWarningMessage() {
+    return `Evacuate slowly the ${this._floors} floors.`;
   }
 
   /**
@@ -34,13 +42,5 @@ export default class SkyHighBuilding extends Building {
     } else {
       throw new TypeError('Floors must be a number');
     }
-  }
-
-  /**
-   * Returns an evacuation warning message.
-   * @return {string} The evacuation warning message.
-   */
-  evacuationWarningMessage() {
-    return `Evacuate slowly the ${this._floors} floors.`;
   }
 }
