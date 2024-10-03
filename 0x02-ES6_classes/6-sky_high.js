@@ -12,7 +12,7 @@ export default class SkyHighBuilding extends Building {
    */
   constructor(sqft, floors) {
     super(sqft);
-    this._floors = floors;
+    this.floors = floors; // Use setter to validate floors
   }
 
   /**
@@ -21,6 +21,19 @@ export default class SkyHighBuilding extends Building {
    */
   get floors() {
     return this._floors;
+  }
+
+  /**
+   * Sets the number of floors in the building.
+   * @param {number} value - The new number of floors.
+   * @throws {TypeError} If the value is not a number.
+   */
+  set floors(value) {
+    if (typeof value === 'number') {
+      this._floors = value;
+    } else {
+      throw new TypeError('Floors must be a number');
+    }
   }
 
   /**
