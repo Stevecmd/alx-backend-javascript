@@ -5,14 +5,9 @@ import Building from './5-building';
  * @extends Building
  */
 export default class SkyHighBuilding extends Building {
-  /**
-   * Creates an instance of SkyHighBuilding.
-   * @param {number} sqft - The square footage of the building.
-   * @param {number} floors - The number of floors in the building.
-   */
   constructor(sqft, floors) {
-    super(sqft); // Correctly pass sqft to the parent class constructor
-    this.floors = floors; // Use setter to validate floors
+    super().sqft = sqft;
+    this.floors = floors;
   }
 
   /**
