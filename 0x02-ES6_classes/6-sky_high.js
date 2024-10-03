@@ -11,7 +11,7 @@ export default class SkyHighBuilding extends Building {
    * @param {number} floors - The number of floors in the building.
    */
   constructor(sqft, floors) {
-    super(sqft);
+    super().sqft = sqft;
     this.floors = floors; // Use setter to validate floors
   }
 
