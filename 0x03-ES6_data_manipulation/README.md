@@ -1,5 +1,18 @@
 # 0x03. ES6 data manipulation
 
+| File Name | Description |
+| ------------ | ----------- |
+| `0-get_list_students.js` | Returns an array of objects representing students |
+| `1-get_list_student_ids.js` | Returns an array of student IDs from a list of objects |
+| `2-get_students_by_loc.js` | Returns an array of students who are located in a specific city |
+| `3-get_ids_sum.js` | Returns the sum of all student IDs |
+| `4-update_grade_by_city.js` | Updates student grades in a given city |
+| `5-typed_arrays.js` | Returns a new ArrayBuffer with an Int8 value at a specific position |
+| `6-set.js` | Returns a Set from an array |
+| `7-has_array_values.js` | Returns a boolean if all elements in the array exist within the set |
+| `8-clean_set.js` | Returns a string of all set values that start with a specific string |
+| `9-groceries_list.js` | Returns a map of groceries with items and quantities |
+| `10-update_uniq_items.js` | Updates the quantities for items with initial quantity at 1 |
 
 #### Setup
 Install NodeJS 12.11.x
@@ -115,6 +128,16 @@ and…
 
 Don’t forget to run `$ npm install` when you have the `package.json`
 
+Run Eslint with `$ npm run lint` or `$ npm run check-lint` or <br />
+`npx eslint <filename>` for example `npx eslint 0-get_list_students.js` 
+
+Run Jest with `$ npm run test`
+
+Run full tests with `$ npm run full-test`
+
+Run Babel with `$ npm run dev <filename>` for example `$ npm run dev 0-get_list_students.js`
+or `npx babel-node <filename>` for example `npx babel-node 0-get_list_students.js`.
+
 ## Tasks
 0. Basic list of objects
 
@@ -143,6 +166,11 @@ stevecmd@ubuntu:~$ npm run dev 0-main.js
   { id: 5, firstName: 'Serena', location: 'San Francisco' }
 ]
 
+stevecmd@ubuntu:~$ npm run lint 0-get_list_students.js
+stevecmd@ubuntu:~$ npm run dev 0-get_list_students.js
+
+> dev
+> npx babel-node 0-get_list_students.js
 ```
 
 File: `0-get_list_students.js`
