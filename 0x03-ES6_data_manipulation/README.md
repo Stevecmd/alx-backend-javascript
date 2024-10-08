@@ -175,6 +175,14 @@ stevecmd@ubuntu:~$ npm run dev 0-get_list_students.js
 
 File: `0-get_list_students.js`
 
+Fix errors using eslint:
+
+```sh
+stevecmd@ubuntu:~$ npm run lint --fix 1-get_list_student_ids.js 
+
+> lint
+> ./node_modules/.bin/eslint 1-get_list_student_ids.js
+```
 
 1. More mapping
 Create a function `getListStudentIds` that returns an array of ids from a list of object.
