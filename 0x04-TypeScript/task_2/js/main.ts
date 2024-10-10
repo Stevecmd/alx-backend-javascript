@@ -65,7 +65,24 @@ function executeWork(employee: Director | Teacher): string {
     }
 }
 
+// String literal type for Subjects
+type Subjects = 'Math' | 'History';
+
+// Function to teach a class based on the subject
+function teachClass(todayClass: Subjects): string {
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    } else if (todayClass === 'History') {
+        return 'Teaching History';
+    }
+    return 'Unknown subject'; // Fallback, though this should not happen with the type constraint
+}
+
 // Test the createEmployee function
 console.log(createEmployee(200)); // Teacher
 console.log(createEmployee(1000)); // Director
 console.log(createEmployee('$500')); // Director
+
+// Test the teachClass function
+console.log(teachClass('Math')); // Teaching Math
+console.log(teachClass('History')); // Teaching History
