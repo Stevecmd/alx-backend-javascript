@@ -1,9 +1,9 @@
-namespace Subjects {
-    export class Subject {
-        protected teacher!: Teacher; // Implementing the Teacher interface
+import { Teacher } from './Teacher';
 
-        setTeacher(teacher: Teacher): void {
-            this.teacher = teacher; // Set the instance attribute teacher
-        }
+export class Subject {
+    protected teacher!: Teacher; // Implementing the Teacher interface
+
+    setTeacher(teacher: Teacher): void {
+        this.teacher = teacher; // Set the instance attribute teacher
     }
 }

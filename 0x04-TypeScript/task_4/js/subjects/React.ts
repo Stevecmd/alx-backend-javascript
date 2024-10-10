@@ -1,5 +1,5 @@
-/// <reference path="./Teacher.ts" />
-/// <reference path="./Subject.ts" />
+import { Subject } from "./Subject";
+import { Teacher } from "./Teacher";
 
 namespace Subjects {
     export class React extends Subject {
@@ -23,3 +23,5 @@ namespace Subjects {
         }
     }
 }
+
+export { Subjects }
