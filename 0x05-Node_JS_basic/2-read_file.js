@@ -1,6 +1,15 @@
 // 2-read_file.js
 const fs = require('fs');
 
+/**
+ * @function countStudents
+ * @description Function that takes a filename as an argument,
+ *              reads the file, counts the number of students and
+ *              the number of students in each field, and prints
+ *              the results to the console.
+ * @param {string} fileName - The name of the file to be read.
+ * @throws {Error} - If the file cannot be read.
+ */
 function countStudents (fileName) {
   const students = {};
   const fields = {};
