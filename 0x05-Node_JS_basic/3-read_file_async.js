@@ -6,6 +6,9 @@ async function countStudents (path) {
     const lines = data.split('\n').filter(line => line.trim() !== '');
     const students = lines.slice(1).map(line => line.split(','));
 
+    const result = [];
+    result.push(`Number of students: ${students.length}`);
+
     console.log(`Number of students: ${students.length}`);
 
     const fields = {};
@@ -20,6 +23,8 @@ async function countStudents (path) {
     for (const [field, names] of Object.entries(fields)) {
       console.log(`Number of students in ${field}: ${names.length}. List: ${names.join(', ')}`);
     }
+
+    return result.join('\n');
   } catch (error) {
     throw new Error('Cannot load the database');
   }
