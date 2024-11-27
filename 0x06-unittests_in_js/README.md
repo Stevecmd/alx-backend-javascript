@@ -24,6 +24,10 @@ Install Dependencies:
 ```sh
 npm i
 ```
+Test files using semistandard:
+```sh
+semistandard *.js
+```
 
 0. Basic test with Mocha and Node assertion library
 Install Mocha using npm:
@@ -125,6 +129,17 @@ Expected output
 'Error'
 ```
 
+To run the operations, use the format:
+```sh
+
+steve@ubuntu$ node 1-calcul.js DIVIDE -1.4 -0.5
+Error
+steve@ubuntu$ node 1-calcul.js SUM 1.4 0.5
+2
+
+```
+
+
 File: `1-calcul.js`, `1-calcul.test.js`
 
 2. Basic test using Chai assertion library
@@ -145,6 +160,40 @@ Requirements:
 
 - You should be able to run the test suite using `npm test 2-calcul_chai.test.js`
 - Every test should pass without any warning
+
+```sh
+node 2-calcul_chai.js SUM 1.4 0.5
+2
+
+```
+Tests
+```sh
+
+npm test 2-calcul_chai.test.js
+
+> 8-api@1.0.0 test
+> mocha 2-calcul_chai.test.js
+
+
+
+  calculateNumber
+    SUM
+      ✓ should return 6 when inputs are 1.4 and 4.5
+      ✓ should return 0 when inputs are 0.1 and 0.3
+      ✓ should return -1 when inputs are -1.4 and -0.5
+    SUBTRACT
+      ✓ should return -4 when inputs are 1.4 and 4.5
+      ✓ should return 0 when inputs are 0.1 and 0.3
+      ✓ should return -1 when inputs are -1.4 and -0.5
+    DIVIDE
+      ✓ should return 0.2 when inputs are 1.4 and 4.5
+      ✓ should return "Error" when inputs are 1.4 and 0
+      ✓ should return Error when inputs are -1.4 and -0.5
+
+
+  9 passing (8ms)
+
+```
 
 File: `2-calcul_chai.js`, `2-calcul_chai.test.js`
 
@@ -179,6 +228,24 @@ Tips:
 - Spies are really useful and allow you to focus only on what your code is doing and not the downstream APIs or functions
 - Remember that integration test is different from unit test. Your unit test should test your code, not the code of a different function
 
+```sh
+
+npm test 3-payment.test.js
+
+> 8-api@1.0.0 test
+> mocha 3-payment.test.js
+
+
+
+  sendPaymentRequestToApi
+The total is: 120
+    ✓ should call Utils.calculateNumber with SUM, 100, 20
+
+
+  1 passing (32ms)
+
+```
+
 File: `utils.js`, `3-payment.js`, `3-payment.test.js`
 
 4. Stubs
@@ -204,6 +271,23 @@ Tips:
 
 - Using stubs allows you to greatly speed up your test. When executing thousands of tests, saving a few seconds is important
 - Using stubs allows you to control specific edge case (e.g a function throwing an error or returning a specific result like a number or a timestamp)
+
+```sh
+npm test 4-payment.test.js
+
+> 8-api@1.0.0 test
+> mocha 4-payment.test.js
+
+
+
+  sendPaymentRequestToApi
+The total is: 10
+    ✓ should call Utils.calculateNumber with SUM, 100, 20 and log the correct message
+
+
+  1 passing (15ms)
+
+```
 
 File: `4-payment.js`, `4-payment.test.js`
 
