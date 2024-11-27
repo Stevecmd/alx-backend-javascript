@@ -313,6 +313,26 @@ Requirements:
 - You should use only one `spy` to complete this exercise
 - You should use a `beforeEach` and a `afterEach` hooks to complete this exercise
 
+```sh
+
+npm test 5-payment.test.js
+
+> 8-api@1.0.0 test
+> mocha 5-payment.test.js
+
+
+
+  sendPaymentRequestToApi
+The total is: 120
+    ✓ should log "The total is: 120" when called with 100 and 20
+The total is: 20
+    ✓ should log "The total is: 20" when called with 10 and 10
+
+
+  2 passing (14ms)
+
+```
+
 File: `5-payment.js`, `5-payment.test.js`
 
 6. Async tests with done
