@@ -10,7 +10,7 @@ const fs = require('fs');
  * @param {string} fileName - The name of the file to be read.
  * @throws {Error} - If the file cannot be read.
  */
-function countStudents (fileName) {
+function countStudents(fileName) {
   const students = {};
   const fields = {};
   let length = 0;

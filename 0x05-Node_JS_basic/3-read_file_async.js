@@ -1,10 +1,10 @@
 const fs = require('fs').promises;
 
-async function countStudents (path) {
+async function countStudents(path) {
   try {
     const data = await fs.readFile(path, 'utf8');
-    const lines = data.split('\n').filter(line => line.trim() !== '');
-    const students = lines.slice(1).map(line => line.split(','));
+    const lines = data.split('\n').filter((line) => line.trim() !== '');
+    const students = lines.slice(1).map((line) => line.split(','));
 
     const result = [];
     result.push(`Number of students: ${students.length}`);
@@ -12,7 +12,7 @@ async function countStudents (path) {
     console.log(`Number of students: ${students.length}`);
 
     const fields = {};
-    students.forEach(student => {
+    students.forEach((student) => {
       const field = student[3];
       if (!fields[field]) {
         fields[field] = [];

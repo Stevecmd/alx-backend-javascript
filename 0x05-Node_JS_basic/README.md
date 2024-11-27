@@ -22,6 +22,19 @@
 - use Nodemon to develop faster
 
 ## Tasks
+- Linting the files
+```sh
+npx eslint 0-console.js
+npx eslint *.js
+
+```
+Apply automatic fix:
+```sh
+
+npx eslint 0-console.js --fix
+
+```
+
 0. Executing basic javascript with Node JS
 In the file `0-console.js`, create a function named `displayMessage` that prints in `STDOUT` the string argument.
 ```sh
