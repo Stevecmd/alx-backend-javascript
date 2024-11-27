@@ -20,6 +20,11 @@
 - How to write integration tests with a small node server
 
 ## Tasks
+Install Dependencies:
+```sh
+npm i
+```
+
 0. Basic test with Mocha and Node assertion library
 Install Mocha using npm:
 
