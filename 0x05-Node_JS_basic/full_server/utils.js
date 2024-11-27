@@ -13,11 +13,11 @@ export default function readDatabase(filePath) {
       if (err) {
         reject(new Error('Cannot load the database'));
       } else {
-        const lines = data.split('\n').filter(line => line.trim() !== '');
-        const students = lines.slice(1).map(line => line.split(','));
+        const lines = data.split('\n').filter((line) => line.trim() !== '');
+        const students = lines.slice(1).map((line) => line.split(','));
         const fields = {};
 
-        students.forEach(student => {
+        students.forEach((student) => {
           const field = student[3];
           if (!fields[field]) {
             fields[field] = [];
