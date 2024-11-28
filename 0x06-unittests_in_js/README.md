@@ -359,6 +359,36 @@ Requirements:
 - Every test should pass without any warning
 - You should use the `done` callback to execute this test
 
+Output:
+```sh
+
+npm test 6-payment_token.test.js
+
+> 8-api@1.0.0 test
+> mocha 6-payment_token.test.js
+
+
+
+  getPaymentTokenFromAPI
+    ✓ should return a resolved promise with the correct data when success is true
+
+
+  1 passing (20ms)
+
+```
+```sh
+
+npx mocha 6-payment_token.test.js
+
+
+  getPaymentTokenFromAPI
+    ✓ should return a resolved promise with the correct data when success is true
+
+
+  1 passing (6ms)
+
+```
+
 File: `6-payment_token.js`, `6-payment_token.test.js`
 
 7. Skip
@@ -417,6 +447,32 @@ Requirements:
 
 - You should be able to run the test suite using `npm test 7-skip.test.js`
 - Every test should pass without any warning
+
+Output:
+```sh
+
+npm test 7-skip.test.js
+
+> 8-api@1.0.0 test
+> mocha 7-skip.test.js
+
+
+
+  Testing numbers
+    ✓ 1 is equal to 1
+    ✓ 2 is equal to 2
+    - 1 is equal to 3
+    ✓ 3 is equal to 3
+    ✓ 4 is equal to 4
+    ✓ 5 is equal to 5
+    ✓ 6 is equal to 6
+    ✓ 7 is equal to 7
+
+
+  7 passing (11ms)
+  1 pending
+
+```
 
 File: `7-skip.test.js`
 
@@ -625,6 +681,3 @@ Requirements:
 - Your server should not display any error
 
 File: `10-api/api.js`, `10-api/api.test.js`, `10-api/package.json`
-
-
-
